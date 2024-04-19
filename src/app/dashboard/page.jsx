@@ -12,10 +12,11 @@ export default function page() {
   const {user, userInfo} = useAuth();
   console.log(userInfo)
   const router = useRouter();
+  
   if (userInfo.isDoctor == true) {
-  router.push('/dashboard/doctordashboard');
+    router.push('/dashboard/doctordashboard');
   } else if (!userInfo.isDoctor) {
-   router.push('/dashboard/patientdashboard');
+    router.push('/dashboard/patientdashboard');
   }
 
   if(user === null) {

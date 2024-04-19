@@ -41,7 +41,7 @@ const SignUpPage = () => {
             isDoctor: false
         }).then(() => {
             console.log('User created:', user);
-            router.push('/dashboard'); // Redirect to dashboard or another page  
+            router.push('/dashboard/patientdashboard'); // Redirect to dashboard or another page  
         })
     } catch (error) {
       if (error instanceof Error) setError(error.message);
@@ -87,7 +87,7 @@ const SignUpPage = () => {
           required
           className="mt-1 p-2 w-full border rounded shadow-sm"
         />
-
+        <div className="block text-sm font-medium text-gray-700 mt-4">Reasons</div>
         <Autocomplete
             className="py-"
             sx={{ marginBottom: '1rem' }}
@@ -104,7 +104,7 @@ const SignUpPage = () => {
                 <TextField
                     {...params}
                     variant="outlined"
-                    label="Interests"
+                    label="Reasons"
                     required={selectedReasons.length === 0} // Ensures at least one interest is selected
                 />
             )}

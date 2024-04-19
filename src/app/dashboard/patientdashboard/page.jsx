@@ -67,6 +67,7 @@ export default function page() {
   
   console.log(doctors)
   if (userInfo.isDoctor) {
+    router.push('/dashboard/doctordashboard')
     return <h1 className="text-2xl font-semibold text-center text-blue-800 mb-4">You are not a Patient</h1>
   }
 
