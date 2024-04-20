@@ -15,7 +15,7 @@ export default function LoginForm() {
         
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            router.push('/dashboard');
+            router.push('/dashboard/patientdashboard');
         } catch (err) {
             console.log(err);
         }
@@ -51,7 +51,7 @@ export default function LoginForm() {
                     />
 
                     <button type="submit" className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
-                    Sign Up
+                    Login
                     </button>
                     <div>
                     If you don't have an account, please 
